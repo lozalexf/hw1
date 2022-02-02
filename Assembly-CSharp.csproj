@@ -53,7 +53,11 @@
     <UnityVersion>2019.4.34f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawn.cs" />
     <Compile Include="Assets\Scripts\PlayersMovement.cs" />
+    <Compile Include="Assets\Scripts\RespawnPlayer.cs" />
+    <Compile Include="Assets\Scripts\ThrowItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
