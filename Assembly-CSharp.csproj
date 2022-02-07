@@ -53,11 +53,17 @@
     <UnityVersion>2019.4.34f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\BoomMine.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\CollectHP.cs" />
+    <Compile Include="Assets\Scripts\EnemyDestroyed.cs" />
     <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayersMovement.cs" />
     <Compile Include="Assets\Scripts\RespawnPlayer.cs" />
+    <Compile Include="Assets\Scripts\SpawnMine.cs" />
     <Compile Include="Assets\Scripts\ThrowItem.cs" />
+    <Compile Include="Assets\Scripts\TurelTrigger.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

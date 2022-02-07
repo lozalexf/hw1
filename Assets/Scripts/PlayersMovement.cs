@@ -8,10 +8,10 @@ public class PlayersMovement : MonoBehaviour
     private int speed = 10;
     [SerializeField]
     private int force = 20;
-    [SerializeField]
-    private int shift = 20;
-    private bool groundCheck;
+    private bool groundCheck = false;
     private Rigidbody player;
+    [SerializeField]
+    private CharacterController controller;
     
     // Start is called before the first frame update
 
@@ -24,43 +24,22 @@ public class PlayersMovement : MonoBehaviour
         groundCheck = true;
     }
 
-    private void OnCollisionExit(Collision collision)
+    void OnCollisionExit(Collision collision)
     {
         groundCheck = false;
     }
 
     void Update()
     {
-        GetInput();
-    }
-    void GetInput()
-    {
-        if (Input.GetKey(KeyCode.W))
-        {
-            if (Input.GetKey(KeyCode.LeftShift))
-            {
-                transform.localPosition += transform.forward * shift * Time.deltaTime;
-            }
-            transform.localPosition += transform.forward * speed * Time.deltaTime;
-        }
+        var x = Input.GetAxis("Horizontal");
+        var z = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.localPosition += -transform.forward * speed * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.localPosition += transform.right * speed * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.localPosition += -transform.right * speed * Time.deltaTime;
-        }
-
+        Vector3 move = transform.right * x + transform.forward * z;
+        controller.Move(move * speed * Time.deltaTime);
 
         if (groundCheck && Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("прыжок");
             player.AddForce(Vector3.up * force, ForceMode.Impulse);
         }
     }
