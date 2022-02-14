@@ -12,17 +12,8 @@ public class CollectHP : MonoBehaviour
             {
                 other.GetComponent<PlayerHealth>().health += 30;
                 Destroy(gameObject);
+                GetComponent<ObjectSpawner>().objectDestroyed.Invoke();
             }
         }
-    }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

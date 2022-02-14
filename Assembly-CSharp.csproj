@@ -56,9 +56,15 @@
     <Compile Include="Assets\Scripts\BoomMine.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\CollectHP.cs" />
+    <Compile Include="Assets\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Scripts\EnemyDestroyed.cs" />
-    <Compile Include="Assets\Scripts\EnemySpawn.cs" />
+    <Compile Include="Assets\Scripts\EnemyPatrol.cs" />
+    <Compile Include="Assets\Scripts\EnemyVision.cs" />
+    <Compile Include="Assets\Scripts\KeyScript.cs" />
+    <Compile Include="Assets\Scripts\KeyZoneScript.cs" />
+    <Compile Include="Assets\Scripts\ObjectSpawner.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\PlayersMovement.cs" />
     <Compile Include="Assets\Scripts\RespawnPlayer.cs" />
     <Compile Include="Assets\Scripts\SpawnMine.cs" />
